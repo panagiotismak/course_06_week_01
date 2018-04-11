@@ -34,10 +34,12 @@ RSpec.describe "ApiDevelopments", type: :request do
 
     it "expose MpngoDB-backed API resource" do
       object = State.create(name: "test")
-      expect(cities_path).to eq("/api/states")
+      expect(states_path).to eq("/api/states")
       get state_path(object.id)
       expect(response).to have_http_status(:ok)
       expect(parsed_body["name"]).to eq("test")
+      expect(parsed_body).to include("created_at")
+      expect(parsed_body).to include("id"=>object.id.to_s)
     end
   end
 end
