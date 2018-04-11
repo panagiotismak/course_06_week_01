@@ -19,8 +19,7 @@ group :development, :test do
 end
 
 gem 'pg', '~>0.19.0', '>=0.19.0'
-
-
+gem 'mongoid', '~>5.1', '>=5.1.5'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
