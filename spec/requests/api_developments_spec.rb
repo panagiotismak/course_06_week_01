@@ -16,7 +16,7 @@ RSpec.describe "ApiDevelopments", type: :request do
 
     it "expose RDBMS-backed API resource" do
       object = City.create(name: "test")
-      expext(cities_path).to eq("/api/cities")
+      expect(cities_path).to eq("/api/cities")
       get city_path(object.id)
       expect(response).to have_http_status(:ok)
       expect(parsed_body["name"]).to eq("test")
@@ -34,7 +34,7 @@ RSpec.describe "ApiDevelopments", type: :request do
 
     it "expose MpngoDB-backed API resource" do
       object = State.create(name: "test")
-      expext(cities_path).to eq("/api/states")
+      expect(cities_path).to eq("/api/states")
       get state_path(object.id)
       expect(response).to have_http_status(:ok)
       expect(parsed_body["name"]).to eq("test")

@@ -2,11 +2,19 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.8'
-
 gem 'rails-api', '~>0.4', '>=0.4.0'
+
+gem 'jbuilder', '~>2.0', '>=2.6.0'
 
 group :development do
   gem 'spring', '~>2.0', '>=2.0.0'
+end
+
+group :development, :test do
+  gem 'webrick', '~>1.3.1', :platforms=>[:mingw, :mswin, :x64_mingw, :jruby]
+  gem 'byebug', '~>9.0.6'
+  gem 'pry-byebug', '~>3.4.0'
+  gem 'httparty', '~>0.14', '>=0.14.0'
   gem 'rspec-rails', '~>3.5', '>=3.5.2'
 end
 
