@@ -35,6 +35,16 @@ module Course06Week01
     #    to rails generate cmd line to be specific
     config.generators {|g| g.orm :active_record}
     # config.generators {|g| g.orm :mongoid}
+
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+
+        resource '/api/*', 
+          :headers => :any, 
+          :methods => [:get]
+      end
+    end
     
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
