@@ -13,7 +13,7 @@
     $stateProvider
     .state("home", {
       url: "/",
-      templateurl: APP_CONFIG.main_page_html,
+      templateUrl: APP_CONFIG.main_page_html
       // controller: ,
       // controllerAs: ,
     })
