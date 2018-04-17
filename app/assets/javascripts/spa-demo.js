@@ -8,3 +8,7 @@
 //= require spa-demo/app.module
 //= require spa-demo/app.router
 //= require spa-demo/app.constant
+
+//= require spa-demo/cities/cities.module
+//= require spa-demo/cities/cities.service
+//= require spa-demo/cities/cities.controller
