@@ -5,7 +5,7 @@
     .module('spa-demo.cities')
     .controller('spa-demo.cities.CitiesController', CitiesController);
 
-  CitiesController.$inject = ['spa-demo.citied.City'];
+  CitiesController.$inject = ['spa-demo.cities.City'];
 
   /* @ngInject */
   function CitiesController(City) {
@@ -18,7 +18,7 @@
     ////////////////
 
     function activate() {
-      newFoo();
+      newCity();
     }
 
     function newCity() {
