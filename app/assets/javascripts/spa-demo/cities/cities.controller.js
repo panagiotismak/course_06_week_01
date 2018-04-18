@@ -19,6 +19,7 @@
 
     function activate() {
       newCity();
+      vm.cities = City.query(); // we need this to obtain instances from Api
     }
 
     function newCity() {
