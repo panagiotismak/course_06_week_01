@@ -12,6 +12,10 @@
     var vm = this;
     vm.cities;
     vm.city;
+    vm.edit = edit;
+    vm.create = create;
+    vm.update = update;
+    vm.remove = remove;
 
     activate();
     return;
@@ -30,8 +34,18 @@
     }
     function edit(object, index) {
     }
+
     function create() {
+      // console.log("creating city, vm.city")
+      vm.city.$save()
+        .then(function (response) {
+          // console.log(response);
+          vm.cities.push(vm.city);
+          newCity();
+        })
+        .catch(handleError);
     }
+
     function update() {
     }
     function remove() {
