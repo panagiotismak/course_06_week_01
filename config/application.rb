@@ -42,7 +42,7 @@ module Course06Week01
 
         resource '/api/*', 
           :headers => :any, 
-          :methods => [:get]
+          :methods => [:get, :post, :put, :delete, :options]
       end
     end
     
